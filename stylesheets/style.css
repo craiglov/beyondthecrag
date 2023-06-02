@@ -10,7 +10,7 @@
     --sidebar-bg:transparent;
     --content-bg:transparent;
     --content-padding:0;
-    --background-image:url(207.png); 
+    --background-image:url(547.png); 
     /* for bg image, above would be url('site.com/image.jpg'); */
   }
   body {
@@ -18,7 +18,7 @@
     font-size:var(--font-size);
     background-color:var(--bg-color);
     color:var(--text-color);
-    background-image:url(207.png);
+    background-image:url(547.png);
   }
   body a {
     color:var(--link-color);

@@ -4,13 +4,13 @@
     --font-family:"Verdana", sans-serif;
     --font-size:x-small;
     --sidebar-border:1px solid #E6E6C3;
-    --link-color:rgb(199, 199, 88);
-    --bg-color:white;
-    --text-color:yellow;
+    --link-color:#b4c788;
+    --bg-color:#312629;
+    --text-color:#b4c788;
     --sidebar-bg:transparent;
     --content-bg:transparent;
     --content-padding:0;
-    --background-image:url(547.png); 
+    /*--background-image:url(648.jpg); */
     /* for bg image, above would be url('site.com/image.jpg'); */
   }
   body {
@@ -18,7 +18,7 @@
     font-size:var(--font-size);
     background-color:var(--bg-color);
     color:var(--text-color);
-    background-image:url(547.png);
+    /*background-image:url(648.jpg);*/
   }
   body a {
     color:var(--link-color);

@@ -124,3 +124,17 @@
        margin-top:20px;
      }
   }
+  #mydiv {
+    position: absolute;
+    z-index: 9;
+    background-image: url(../blackdresses/note.png);
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+  }
+  #notepad{
+    height: 600px;
+    width:400px;
+    background-color:white;
+  }

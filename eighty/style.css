@@ -39,6 +39,7 @@ body {
   }
 }
 .title{
+  margin-top:200px;
   width:100%;
 }
 .title img{
@@ -47,4 +48,14 @@ body {
 * {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+}
+.prompt-item {
+  padding: 0;
+  text-align: center;
+}
+
+.prompt-item img {
+  width: 200px;
+  height: 100px;
+  display: block;
 }

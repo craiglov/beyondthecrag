@@ -1,3 +1,4 @@
+
 body {
   background-color: #e7e5e6;
 }
@@ -8,8 +9,8 @@ body {
 }
 
 .grid-item img {
-  width: 100%;
-  height: auto;
+  width: 59px;
+  height: 80px;
   display: block;
 }
 
@@ -42,4 +43,8 @@ body {
 }
 .title img{
   width:80%;
+}
+* {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }

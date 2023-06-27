@@ -50,6 +50,7 @@ body {
   touch-action: manipulation;
 }
 .prompt-item {
+  width:200px;
   padding: 0;
   text-align: center;
 }

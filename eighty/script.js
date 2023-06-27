@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create the show/hide button element
     var toggleButton = document.createElement('button');
     toggleButton.className = 'toggle-button';
-    toggleButton.innerHTML = 'Show Arrows';
+    toggleButton.innerHTML = 'Show UI';
     toggleButton.style.display = 'none';
   
     // Append the toggle button to the body
@@ -54,11 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
         arrows.forEach(function(arrow) {
           arrow.style.display = 'block';
         });
-        toggleButton.innerHTML = 'Hide Arrows';
+        createTextInput();
+        toggleButton.innerHTML = 'Hide UI';
       } else {
         arrows.forEach(function(arrow) {
           arrow.style.display = 'none';
         });
+        removeTextInput();
         toggleButton.innerHTML = 'Show Arrows';
       }
     });
@@ -111,5 +113,36 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
       toggleButton.style.display = 'block';
     }, 1000);
+  
+    function createTextInput() {
+      var inputContainer = document.createElement('div');
+      inputContainer.className = 'input-container';
+  
+      var input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = 'Enter text';
+      input.className = 'text-input';
+  
+      var submitButton = document.createElement('button');
+      submitButton.innerHTML = 'Submit';
+      submitButton.className = 'submit-button';
+  
+      inputContainer.appendChild(input);
+      inputContainer.appendChild(submitButton);
+      document.body.appendChild(inputContainer);
+  
+      submitButton.addEventListener('click', function() {
+        var enteredText = input.value;
+        var promptaDiv = document.getElementById('prompta');
+        promptaDiv.textContent = enteredText;
+      });
+    }
+  
+    function removeTextInput() {
+      var inputContainer = document.querySelector('.input-container');
+      if (inputContainer) {
+        inputContainer.remove();
+      }
+    }
   });
   

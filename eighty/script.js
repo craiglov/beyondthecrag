@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Create the cycle button element
     var cycleButton = document.createElement('button');
-    cycleButton.innerHTML = 'Cycle Images';
+    cycleButton.innerHTML = 'Change Prompt';
     cycleButton.className = 'cycle-button ui-element';
   
     // Append the UI elements to the body

@@ -49,19 +49,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Add click event listener to the toggle button
     toggleButton.addEventListener('click', function() {
-      var arrows = document.querySelectorAll('.arrow');
-      if (arrows[0].style.display === 'none') {
-        arrows.forEach(function(arrow) {
-          arrow.style.display = 'block';
+      var uiElements = document.querySelectorAll('.ui-element');
+      if (uiElements[0].style.display === 'none') {
+        uiElements.forEach(function(element) {
+          element.style.display = 'block';
         });
-        createTextInput();
         toggleButton.innerHTML = 'Hide UI';
       } else {
-        arrows.forEach(function(arrow) {
-          arrow.style.display = 'none';
+        uiElements.forEach(function(element) {
+          element.style.display = 'none';
         });
-        removeTextInput();
-        toggleButton.innerHTML = 'Show Arrows';
+        toggleButton.innerHTML = 'Show UI';
       }
     });
   
@@ -72,12 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
       // Create the up arrow element
       var upArrow = document.createElement('div');
-      upArrow.className = 'arrow up-arrow';
+      upArrow.className = 'arrow up-arrow ui-element';
       upArrow.innerHTML = '&#8593;';
   
       // Create the down arrow element
       var downArrow = document.createElement('div');
-      downArrow.className = 'arrow down-arrow';
+      downArrow.className = 'arrow down-arrow ui-element';
       downArrow.innerHTML = '&#8595;';
   
       // Append the arrows to the grid item
@@ -109,40 +107,52 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
+    // Create the text input element
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = 'Enter text';
+    input.className = 'text-input ui-element';
+  
+    // Create the submit button element
+    var submitButton = document.createElement('button');
+    submitButton.innerHTML = 'Submit';
+    submitButton.className = 'submit-button ui-element';
+  
+    // Create the cycle button element
+    var cycleButton = document.createElement('button');
+    cycleButton.innerHTML = 'Cycle Images';
+    cycleButton.className = 'cycle-button ui-element';
+  
+    // Append the UI elements to the body
+    document.body.appendChild(input);
+    document.body.appendChild(submitButton);
+    document.body.appendChild(cycleButton);
+  
+    // Add click event listener to the submit button
+    submitButton.addEventListener('click', function() {
+      var enteredText = input.value;
+      var promptaDiv = document.getElementById('prompta');
+      promptaDiv.textContent = enteredText;
+    });
+  
+    // Add click event listener to the cycle button
+    var promptItem = document.querySelector('.prompt-item');
+    var promptItemIndex = 0;
+    cycleButton.addEventListener('click', function() {
+      var urls = [
+        'prompts/1.png',
+        'prompts/2.png',
+        'prompts/3.png',
+        'prompts/4.png',
+        'prompts/5.png'
+      ];
+      promptItemIndex = (promptItemIndex + 1) % urls.length;
+      promptItem.querySelector('img').src = urls[promptItemIndex];
+    });
+  
     // Show the toggle button after a delay
     setTimeout(function() {
       toggleButton.style.display = 'block';
     }, 1000);
-  
-    function createTextInput() {
-      var inputContainer = document.createElement('div');
-      inputContainer.className = 'input-container';
-  
-      var input = document.createElement('input');
-      input.type = 'text';
-      input.placeholder = 'Enter text';
-      input.className = 'text-input';
-  
-      var submitButton = document.createElement('button');
-      submitButton.innerHTML = 'Submit';
-      submitButton.className = 'submit-button';
-  
-      inputContainer.appendChild(input);
-      inputContainer.appendChild(submitButton);
-      document.body.appendChild(inputContainer);
-  
-      submitButton.addEventListener('click', function() {
-        var enteredText = input.value;
-        var promptaDiv = document.getElementById('prompta');
-        promptaDiv.textContent = enteredText;
-      });
-    }
-  
-    function removeTextInput() {
-      var inputContainer = document.querySelector('.input-container');
-      if (inputContainer) {
-        inputContainer.remove();
-      }
-    }
   });
   

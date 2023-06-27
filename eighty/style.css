@@ -37,3 +37,9 @@ body {
     justify-content: center !important;
   }
 }
+.title{
+  width:100%;
+}
+.title img{
+  width:80%;
+}

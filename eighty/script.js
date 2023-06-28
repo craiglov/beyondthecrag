@@ -111,12 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create the text input element
     var input = document.createElement('input');
     input.type = 'text';
-    input.placeholder = 'Enter text';
+    input.placeholder = 'Prompt Answer';
     input.className = 'text-input ui-element';
   
     // Create the submit button element
     var submitButton = document.createElement('button');
-    submitButton.innerHTML = 'Submit';
+    submitButton.innerHTML = 'Update';
     submitButton.className = 'submit-button ui-element';
   
     // Create the cycle button element

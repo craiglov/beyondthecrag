@@ -88,3 +88,8 @@ body {
   color: #2d63c8;
   background-color: #ffffff;
 }
+#prompta{
+  font-size:30px;
+  width:400px;
+  word-wrap: break-word;
+}

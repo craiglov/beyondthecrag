@@ -60,3 +60,31 @@ body {
   height: 100px;
   display: block;
 }
+.next {
+  height:25px;
+  width: 50px;
+  color: #ffffff;
+  background-color: #62a0ea;
+  font-size: 19px;
+  border: 1px solid #2d63c8;
+
+  cursor: pointer
+}
+.next :hover {
+  color: #2d63c8;
+  background-color: #ffffff;
+}
+.prev {
+  height:25px;
+  width: 50px;
+  color: #ffffff;
+  background-color: #62a0ea;
+  font-size: 19px;
+  border: 1px solid #2d63c8;
+
+  cursor: pointer
+}
+.prev :hover {
+  color: #2d63c8;
+  background-color: #ffffff;
+}

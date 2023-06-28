@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleButton.className = 'toggle-button';
     toggleButton.innerHTML = 'Show UI';
     toggleButton.style.display = 'none';
-  
+    
     // Append the toggle button to the body
     document.body.appendChild(toggleButton);
   
@@ -71,12 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
       // Create the up arrow element
       var upArrow = document.createElement('div');
       upArrow.className = 'arrow up-arrow ui-element';
-      upArrow.innerHTML = '&#8593;';
+      upArrow.innerHTML = "<button class=\"next\" name=\"myButton\">next</button>";
+  
   
       // Create the down arrow element
       var downArrow = document.createElement('div');
       downArrow.className = 'arrow down-arrow ui-element';
-      downArrow.innerHTML = '&#8595;';
+      downArrow.innerHTML = "<button class=\"prev\" name=\"myButton\">back</button>";
   
       // Append the arrows to the grid item
       item.appendChild(upArrow);
@@ -155,4 +156,36 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleButton.style.display = 'block';
     }, 1000);
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all the sticker items
+    var stickerItems = document.querySelectorAll('.sticker-item');
   
+    // Define the array of image names
+    var images = [
+      'stickers/star.jpg',
+      'stickers/hk.jpg',
+      'stickers/emo.jpg',
+      'stickers/ang.jpg'
+    ];
+  
+    // Add click event listener to the sticker items
+    stickerItems.forEach(function(item) {
+      // Set the initial index to 0
+      item.setAttribute('data-index', 0);
+  
+      // Add click event listener to the sticker item
+      item.addEventListener('click', function() {
+        // Get the current index
+        var currentIndex = parseInt(item.getAttribute('data-index'));
+  
+        // Calculate the next index, wrapping around to the beginning if necessary
+        var nextIndex = (currentIndex + 1) % images.length;
+  
+        // Set the image source based on the current index
+        item.querySelector('img').src = images[nextIndex];
+  
+        // Update the data-index attribute with the new index
+        item.setAttribute('data-index', nextIndex);
+      });
+    });
+  });

@@ -63,7 +63,6 @@
   
   .header {
     display:flex;
-    flex-spacing:space-between;
     padding-bottom:10px;
   }
   .header-left {

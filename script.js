@@ -11,4 +11,5 @@ function typeWriter() {
   }
 }
 
+  
 setTimeout(typeWriter, 100);

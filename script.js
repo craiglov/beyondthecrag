@@ -7,8 +7,8 @@ function typeWriter() {
 
   if (currentIndex < text.length - 1) {
     currentIndex++;
-    setTimeout(typeWriter, 100);
+    setTimeout(typeWriter, 170);
   }
 }
 
-setTimeout(typeWriter, 1500);
+setTimeout(typeWriter, 100);

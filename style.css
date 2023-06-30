@@ -119,12 +119,20 @@
     width:130px;
     display:block;
   }
+    
+.parallax {
+  height: 450px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  perspective: 1px;
+}
+
    @media only screen and (max-width: 730px) {
     .parallax{
-      height:100x;
+      height:250px;
     }
     .header{
-      font-size:32px;
+      font-size:24px;
     }
      .flex {
        flex-wrap:wrap;
@@ -157,13 +165,6 @@
     width:400px;
     background-color:white;
   }
-  
-.parallax {
-  height: 450px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  perspective: 1px;
-}
 
 .foreground {
   position: absolute;

@@ -178,7 +178,7 @@
 .foreground img {
   position: absolute;
   top: 0;
-  animation: 2s ease-out 0s 1 slideInFromTopF;
+  animation: 1.5s ease-out 0s 1 slideInFromTopF;
   width: 100%;
   height: auto;
 }
@@ -197,7 +197,7 @@
   top: 0;
   width: 100%;
   height: auto;
-  animation: 2s ease-out 0s 1 slideInFromTop;
+  animation: 1.5s ease-out 0s 1 slideInFromTop;
 }
 @keyframes slideInFromTop {
   0% {

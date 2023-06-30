@@ -4,7 +4,7 @@
     --font-family:"Verdana", sans-serif;
     --font-size:x-small;
     --sidebar-border:1px solid #938282;
-    --link-color:#4f4e80;
+    --link-color:#f8f088;
     --bg-color:#300030;
     --text-color:#e4cbbf;
     --sidebar-bg:transparent;
@@ -14,6 +14,7 @@
     /* for bg image, above would be url('site.com/image.jpg'); */
   }
   body {
+    overflow:hidden;
     font-family:var(--font-family);
     font-size:var(--font-size);
     background-color:var(--bg-color);
@@ -39,8 +40,10 @@
     display:flex;
   }
   .container {
+    height:100vh;
     max-width:700px;
     margin:0 auto;
+    overflow:hidden;
   }
   .right {
     margin-left:10px;
@@ -58,7 +61,15 @@
     padding-bottom:5px;
   }
   .footer {
+    font-size: 16px;
     text-align:center;
+  }
+  .footer a:link{
+    text-decoration: none;
+  }
+  .footer a:hover{
+    text-decoration: none;
+    color:#f89020;
   }
   
   .header {
@@ -145,7 +156,7 @@
   }
   
 .parallax {
-  height: 100vh;
+  height: 400px;
   overflow-x: hidden;
   overflow-y: scroll;
   perspective: 1px;
@@ -199,5 +210,24 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+#typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+@keyframes typing {
+  0% {
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
   }
 }

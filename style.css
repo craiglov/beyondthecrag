@@ -159,9 +159,9 @@
   }
   
 .parallax {
-  height: 400px;
+  height: 450px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   perspective: 1px;
 }
 

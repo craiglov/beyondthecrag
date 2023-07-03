@@ -5,13 +5,15 @@ body {
 
 .grid-item {
   padding: 0;
+  width: 59px;
+  height: 80px;
   text-align: center;
 }
 
 .grid-item img {
   width: 59px;
   height: 80px;
-  display: block;
+  display: flex;
 }
 
 .sticker-item {
@@ -92,4 +94,8 @@ body {
   font-size:30px;
   width:400px;
   word-wrap: break-word;
+}
+.col-1{
+  max-width: 52px;
+  height: 80px;
 }

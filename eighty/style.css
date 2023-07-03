@@ -5,8 +5,6 @@ body {
 
 .grid-item {
   padding: 0;
-  width: 59px;
-  height: 80px;
   text-align: center;
 }
 
@@ -97,5 +95,4 @@ body {
 }
 .col-1{
   max-width: 52px;
-  height: 80px;
 }

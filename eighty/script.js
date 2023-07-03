@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Create the submit button element
     var submitButton = document.createElement('button');
-    submitButton.innerHTML = 'Update';
+    submitButton.innerHTML = 'Submit/Update';
     submitButton.className = 'submit-button ui-element';
   
     // Create the cycle button element

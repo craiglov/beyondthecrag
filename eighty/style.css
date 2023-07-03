@@ -70,6 +70,7 @@ body {
   display: block;
 }
 .next {
+    text-align:left;
   height:25px;
   width: 45px;
   color: #ffffff;
@@ -89,6 +90,7 @@ body {
   background-color: #ffffff;
 }
 .prev {
+    text-align:left;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;

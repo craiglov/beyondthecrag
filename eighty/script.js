@@ -8,8 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
       'beads/lightblue.png',
       'beads/white.png',
       'beads/lightpink.png',
-      'beads/lightorange.png',
+      'beads/orange.png',
       'beads/lightgreen.png',
+      'beads/red.png',
+      'beads/dark.png',
+      'beads/yellow.png',
+      'beads/1.png',
+      'beads/2.png',
+      'beads/3.png',
+      'beads/4.png',
+      'beads/5.png',
+      'beads/6.png',
+      'beads/7.png',
+      'beads/8.png',
+      'beads/9.png',
       'beads/a.png',
       'beads/b.png',
       'beads/c.png',
@@ -165,7 +177,13 @@ document.addEventListener('DOMContentLoaded', function() {
       'stickers/star.jpg',
       'stickers/hk.jpg',
       'stickers/emo.jpg',
-      'stickers/ang.jpg'
+      'stickers/ang.jpg',
+      'stickers/7.jpg',
+      'stickers/4.jpg',
+      'stickers/9.jpg',
+      'stickers/10.jpg',
+      'stickers/bww.png',
+      'stickers/blank.png'
     ];
   
     // Add click event listener to the sticker items

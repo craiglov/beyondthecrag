@@ -233,42 +233,6 @@ removeColumnButton.addEventListener('click', function() {
     }
   });
 });
-  // Get all the sticker items
-  var stickerItems = document.querySelectorAll('.sticker-item');
 
-  // Define the array of image names
-  var images = [
-    'stickers/star.jpg',
-    'stickers/hk.jpg',
-    'stickers/emo.jpg',
-    'stickers/ang.jpg',
-    'stickers/7.jpg',
-    'stickers/4.jpg',
-    'stickers/9.jpg',
-    'stickers/10.jpg',
-    'stickers/bww.png',
-    'stickers/blank.png'
-  ];
-
-  // Add click event listener to the sticker items
-  stickerItems.forEach(function(item) {
-    // Set the initial index to 0
-    item.setAttribute('data-index', 0);
-
-    // Add click event listener to the sticker item
-    item.addEventListener('click', function() {
-      // Get the current index
-      var currentIndex = parseInt(item.getAttribute('data-index'));
-
-      // Calculate the next index, wrapping around to the beginning if necessary
-      var nextIndex = (currentIndex + 1) % images.length;
-
-      // Set the image source based on the current index
-      item.querySelector('img').src = images[nextIndex];
-
-      // Update the data-index attribute with the new index
-      item.setAttribute('data-index', nextIndex);
-    });
-  });
 });
 

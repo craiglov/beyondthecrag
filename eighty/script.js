@@ -200,30 +200,27 @@ addColumnButton.addEventListener('click', function() {
       </div>
     `;
     row.appendChild(newGridItem);
-    
+
     // Add click event listeners to the arrow elements
     var upArrow = newGridItem.querySelector('.up-arrow');
     var downArrow = newGridItem.querySelector('.down-arrow');
-    
+    var img = newGridItem.querySelector('img');
+    var currentIndex = 0;
+
     upArrow.addEventListener('click', function(event) {
       event.stopPropagation();
-      var img = newGridItem.querySelector('img');
-      var currentIndex = parseInt(img.getAttribute('data-index'));
-      var previousIndex = (currentIndex - 1 + images.length) % images.length;
-      img.src = images[previousIndex];
-      img.setAttribute('data-index', previousIndex);
+      currentIndex = (currentIndex + 1) % images.length;
+      img.src = images[currentIndex];
     });
-    
+
     downArrow.addEventListener('click', function(event) {
       event.stopPropagation();
-      var img = newGridItem.querySelector('img');
-      var currentIndex = parseInt(img.getAttribute('data-index'));
-      var nextIndex = (currentIndex + 1) % images.length;
-      img.src = images[nextIndex];
-      img.setAttribute('data-index', nextIndex);
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      img.src = images[currentIndex];
     });
   });
 });
+
 
 
 // Add click event listener to remove column button

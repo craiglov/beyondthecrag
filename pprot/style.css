@@ -1,0 +1,79 @@
+.bg-container{
+    background-image: url('personal.jpg');
+    height:700px;
+    width: 700px;
+}
+.hovermonitor{
+
+    position:absolute;
+    display:flex;
+    height: 50px;
+    width: 50px;
+    left:570px;
+    top:530px;
+    rotate: -9deg;
+}
+.hovermonitor:hover{
+
+    border-style: solid;
+    border-color: white;
+}
+.hoverbook{
+
+    position:absolute;
+    display:flex;
+    height: 180px;
+    width: 50px;
+    left:635px;
+    top:370px;
+    rotate: -6deg;
+}
+.hoverbook:hover{
+    border-style: solid;
+    border-color: white;
+}
+.hovercd{
+    position:absolute;
+    display:flex;
+    height: 70px;
+    width: 70px;
+    left:580px;
+    top:470px;
+    rotate: -2deg;
+}
+.hovercd:hover{
+    
+    border-style: solid;
+    border-color: white;
+}
+.vid{
+    position:absolute;
+    display:flex;
+    height: 100px;
+    width: 130px;
+    left:390px;
+    top:330px;
+    rotate: 3deg;
+    z-index: 1;
+    object-fit: fill;
+    border: 1px solid #ccc;
+
+    /* each value for each corner clockwise starting from top left */
+    -webkit-border-radius: 10px 3px 0 20px;
+            border-radius: 10px 3px 0 20px;
+    
+}
+.scan{
+    pointer-events: none;
+    background-image: url(scan.gif);
+    opacity: 0.3;
+    position:absolute;
+    display:flex;
+    height: 100px;
+    width: 130px;
+    left:390px;
+    top:330px;
+    rotate: 3deg;
+    z-index: 5;
+    
+}

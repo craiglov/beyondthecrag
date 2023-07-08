@@ -1,0 +1,91 @@
+html{
+    background-color: #c6cbcf;
+    
+}
+body{
+    background-color: #c6cbcf;
+
+}
+.bg-container{
+    background-image: url('key.jpg');
+    height:700px;
+    width: 700px;
+}
+.hovermonitor{
+ 
+    position:absolute;
+    display:flex;
+    height: 50px;
+    width: 50px;
+    left:570px;
+    top:530px;
+    rotate: -9deg;
+}
+.hovermonitor:hover{
+
+    border-style: solid;
+    border-color: white;
+}
+.hoverbook{
+
+    position:absolute;
+    display:flex;
+    height: 180px;
+    width: 50px;
+    left:635px;
+    top:370px;
+    rotate: -6deg;
+}
+.hoverbook:hover{
+    border-style: solid;
+    border-color: white;
+    
+}
+.hovercd{
+    position:absolute;
+    display:flex;
+    height: 180px;
+    width: 290px;
+    left:400px;
+    top:580px;
+    rotate: 3deg;
+    
+}
+.hovercd:hover{
+    
+    box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 0px rgba(255,255,255,0.75) inset;
+-webkit-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
+-moz-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
+    
+}
+.vid{
+    position:absolute;
+    display:flex;
+    height: 100px;
+    width: 130px;
+    left:390px;
+    top:330px;
+    rotate: 3deg;
+    z-index: 1;
+    object-fit: fill;
+    border: 1px solid #ccc;
+
+    /* each value for each corner clockwise starting from top left */
+    -webkit-border-radius: 10px 3px 0 20px;
+            border-radius: 10px 3px 0 20px;
+    
+}
+.scan{
+    pointer-events: none;
+    background-image: url(scan.gif);
+    opacity: 0.3;
+    position:absolute;
+    display:flex;
+    height: 100px;
+    width: 130px;
+    left:390px;
+    top:330px;
+    rotate: 3deg;
+    z-index: 5;
+    
+}

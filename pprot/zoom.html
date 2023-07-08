@@ -57,7 +57,8 @@
   </script>
   <script>
     function playVideo() {
-      var video = document.getElementById("80");
+      let video = document.getElementById("80");
+      video.volume=0.2;
       if (video.paused) {
         video.play();
       } else {

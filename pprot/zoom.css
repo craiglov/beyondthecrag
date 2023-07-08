@@ -17,9 +17,9 @@ body{
     display:flex;
     height: 100px;
     width: 90px;
-    left:470px;
-    top:500px;
-    rotate: -17deg;
+    left:560px;
+    top:600px;
+    rotate: 3deg;
 }
 .hovermonitor:hover{
     box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 0px rgba(255,255,255,0.75) inset;
@@ -58,10 +58,10 @@ body{
     position:absolute;
     display:flex;
     height: 200px;
-    width: 260px;
-    left:100px;
-    top:100px;
-    rotate: 3deg;
+    width: 280px;
+    left:200px;
+    top:130px;
+    rotate: 6deg;
     z-index: 1;
     object-fit: fill;
     border: 1px solid #ccc;
@@ -78,10 +78,10 @@ body{
     position:absolute;
     display:flex;
     height: 200px;
-    width: 260px;
-    left:100px;
-    top:100px;
-    rotate: 3deg;
+    width: 280px;
+    left:200px;
+    top:130px;
+    rotate: 6deg;
     z-index: 5;
     
 }

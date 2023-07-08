@@ -1,13 +1,13 @@
 html{
     background-color: #c6cbcf;
-    
 }
 body{
     background-color: #c6cbcf;
 
 }
 .bg-container{
-    background-image: url('personal.jpg');
+    background-image: url('zoom.jpg');
+    background-size:cover;
     height:700px;
     width: 700px;
 }
@@ -15,16 +15,16 @@ body{
 
     position:absolute;
     display:flex;
-    height: 50px;
-    width: 50px;
-    left:570px;
-    top:530px;
-    rotate: -9deg;
+    height: 100px;
+    width: 90px;
+    left:470px;
+    top:500px;
+    rotate: -17deg;
 }
 .hovermonitor:hover{
-
-    border-style: solid;
-    border-color: white;
+    box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 0px rgba(255,255,255,0.75) inset;
+    -webkit-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
 }
 .hoverbook{
 
@@ -39,32 +39,28 @@ body{
 .hoverbook:hover{
     border-style: solid;
     border-color: white;
-    
 }
 .hovercd{
     position:absolute;
     display:flex;
-    height: 210px;
-    width: 390px;
-    left:280px;
+    height: 70px;
+    width: 70px;
+    left:580px;
     top:470px;
-    rotate: 5deg;
-    
+    rotate: -2deg;
 }
 .hovercd:hover{
     
-    box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 0px rgba(255,255,255,0.75) inset;
--webkit-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
--moz-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
-    
+    border-style: solid;
+    border-color: white;
 }
 .vid{
     position:absolute;
     display:flex;
-    height: 100px;
-    width: 130px;
-    left:390px;
-    top:330px;
+    height: 200px;
+    width: 260px;
+    left:100px;
+    top:100px;
     rotate: 3deg;
     z-index: 1;
     object-fit: fill;
@@ -81,10 +77,10 @@ body{
     opacity: 0.3;
     position:absolute;
     display:flex;
-    height: 100px;
-    width: 130px;
-    left:390px;
-    top:330px;
+    height: 200px;
+    width: 260px;
+    left:100px;
+    top:100px;
     rotate: 3deg;
     z-index: 5;
     

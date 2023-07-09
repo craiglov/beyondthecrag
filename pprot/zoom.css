@@ -1,25 +1,31 @@
 html{
-    background-color: #c6cbcf;
+    background-color: black;
 }
 body{
-    background-color: #c6cbcf;
+    margin: auto;
+    max-width: 800px;
+    background-color: black;
 
 }
 .bg-container{
+    object-fit: cover;
+    background-size: 800px 600px;
+    position: absolute;
+    top:100px;
     background-image: url('zoom.jpg');
-    background-size:cover;
-    height:700px;
-    width: 700px;
+    background-size:fill;
+    height:600px;
+    width: 800px;
 }
 .hovermonitor{
 
     position:absolute;
     display:flex;
     height: 100px;
-    width: 90px;
-    left:560px;
-    top:600px;
-    rotate: 3deg;
+    width: 120px;
+    left:650px;
+    top:490px;
+    rotate: 9deg;
 }
 .hovermonitor:hover{
     box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 0px rgba(255,255,255,0.75) inset;
@@ -30,15 +36,16 @@ body{
 
     position:absolute;
     display:flex;
-    height: 180px;
-    width: 50px;
-    left:635px;
-    top:370px;
+    height: 80px;
+    width: 100px;
+    left:485px;
+    top:490px;
     rotate: -6deg;
 }
 .hoverbook:hover{
-    border-style: solid;
-    border-color: white;
+    box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 0px rgba(255,255,255,0.75) inset;
+    -webkit-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
 }
 .hovercd{
     position:absolute;
@@ -46,7 +53,7 @@ body{
     height: 70px;
     width: 70px;
     left:580px;
-    top:470px;
+    top:370px;
     rotate: -2deg;
 }
 .hovercd:hover{
@@ -57,11 +64,11 @@ body{
 .vid{
     position:absolute;
     display:flex;
-    height: 200px;
-    width: 280px;
-    left:200px;
-    top:130px;
-    rotate: 6deg;
+    height: 180px;
+    width: 298px;
+    left:245px;
+    top:100px;
+    rotate: 4deg;
     z-index: 1;
     object-fit: fill;
     border: 1px solid #ccc;
@@ -77,11 +84,11 @@ body{
     opacity: 0.3;
     position:absolute;
     display:flex;
-    height: 200px;
-    width: 280px;
-    left:200px;
-    top:130px;
-    rotate: 6deg;
+    height: 180px;
+    width: 298px;
+    left:245px;
+    top:100px;
+    rotate: 4deg;
     z-index: 5;
     
 }

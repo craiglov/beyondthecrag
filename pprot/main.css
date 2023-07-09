@@ -1,15 +1,22 @@
 html{
-    background-color: #c6cbcf;
+    background-color: black;
     
 }
 body{
-    background-color: #c6cbcf;
+    margin: auto;
+    max-width: 800px;
+    background-color: black;
 
 }
 .bg-container{
+    
+    background-size: 800px 600px;
+    position: absolute;
+    top:100px;
     background-image: url('full.jpg');
-    height:700px;
-    width: 700px;
+    height:600px;
+    object-fit: fill;
+    width: 800px;
 }
 .hovermonitor{
  
@@ -18,7 +25,7 @@ body{
     height: 50px;
     width: 50px;
     left:570px;
-    top:530px;
+    top:380px;
     rotate: -9deg;
 }
 .hovermonitor:hover{
@@ -32,8 +39,8 @@ body{
     display:flex;
     height: 180px;
     width: 280px;
-    left:265px;
-    top:370px;
+    left:165px;
+    top:270px;
     rotate: 2deg;
 }
 .hoverbook:hover{
@@ -51,7 +58,7 @@ body{
     height: 300px;
     width: 290px;
     left:20px;
-    top:220px;
+    top:120px;
     rotate: 3deg;
     
 }

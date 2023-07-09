@@ -23,6 +23,7 @@
 <div class="flex-container">
 
     <div class="bg-container">
+        <div class="wells"  onclick="playWells()"></div>
         <div class="nav"></div>
         <div class="back" onmouseover="playSound()" onclick="openLink('main.html')"></div>
         <div class="home" onmouseover="playSound()" onclick="openLink('main.html')"></div>
@@ -66,6 +67,16 @@
 }, false);
 function loopAudio(){  
 myAudio.play();
+} 
+  </script>
+  <script>
+    var wells = new Audio('wells.mp3');
+
+function playWells(){ 
+
+
+    wells.playbackRate = ['1.5', '2', '2.5'][Math.floor(Math.random() * 3)]
+wells.play();
 } 
   </script>
   </body>

@@ -104,7 +104,7 @@ body{
     top:600px;
 }
 .back{
-    
+    border: solid 5px rgb(112, 112, 112);
     background-image: url(arrow.jpg);
     position:absolute;
     display:flex;
@@ -118,7 +118,7 @@ body{
     border-style: ridge;
 }
 .home{
-    
+    border: solid 5px rgb(112, 112, 112);
     background-image: url(home.jpg);
     position:absolute;
     display:flex;
@@ -132,7 +132,7 @@ body{
     border-style: ridge;
 }
 .sound{
-    
+    border: solid 5px rgb(112, 112, 112);
     background-image: url(sound.jpg);
     position:absolute;
     display:flex;

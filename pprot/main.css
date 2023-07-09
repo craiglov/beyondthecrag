@@ -38,10 +38,13 @@ body{
     position:absolute;
     display:flex;
     height: 180px;
-    width: 280px;
-    left:165px;
+    width: 200px;
+    left:240px;
     top:270px;
     rotate: 2deg;
+    transform:skew(0deg,5deg);
+    -webkit-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
 }
 .hoverbook:hover{
 
@@ -53,11 +56,14 @@ body{
 .hovercd{
     position:absolute;
     display:flex;
-    height: 300px;
-    width: 290px;
-    left:20px;
-    top:120px;
+    height: 180px;
+    width: 170px;
+    left:70px;
+    top:140px;
     rotate: 3deg;
+    transform:skew(1deg, 1deg);
+    -webkit-border-radius: 10px 10px 10px 10px;
+            border-radius: 10px 10px 10px 10px;
     
 }
 .hovercd:hover{

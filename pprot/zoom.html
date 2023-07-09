@@ -27,8 +27,8 @@
         <div class="back" onmouseover="playSound()" onclick="openLink('personalprotocol.html')"></div>
         <div class="home" onmouseover="playSound()" onclick="openLink('main.html')"></div>
         <div class="sound" onmouseover="playSound()" onclick="loopAudio()"></div>
-        <div class="hoverbook" onmouseover="playSound()" onclick="openLink('../eighty/personalprotocol.html')"></div>
-        <div class="hovermonitor" onclick="playVideo()" onmouseover="playSound()" >
+        <div class="hoverbook" onmouseover="playSound()"  onclick="openLink('../eighty/personalprotocol.html')"></div>
+        <div class="hovermouse" onclick="playVideo()" onmouseover="playSound()" >
         </div>
         <!-- <div class="hoverbook" onmouseover="playSound()" onclick="openLink(' https://beyondthecrag.net/eighty/personalprotocol')"></div>
         <div class="hovercd" onmouseover="playSound()" onclick="openLink(' https://beyondthecrag.net/eighty/personalprotocol')"></div> -->
@@ -56,6 +56,14 @@
       sound.play();
     }
   </script>
+  <script>
+    var ins = new Audio('tr.ogg'); // Replace 'path/to/sound.mp3' with the actual path to your sound file
+    sound.volume = 0.4;
+    function tran() {
+  ins.currentTime = 0;
+  ins.play();
+}
+</script>
     <script>
     function openLink(url) {
       window.location.href = url;

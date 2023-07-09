@@ -50,11 +50,11 @@ body{
 .hovercd{
     position:absolute;
     display:flex;
-    height: 180px;
+    height: 280px;
     width: 290px;
-    left:400px;
-    top:580px;
-    rotate: 3deg;
+    left:240px;
+    top:280px;
+    rotate: 18deg;
     
 }
 .hovercd:hover{

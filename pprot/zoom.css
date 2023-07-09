@@ -17,20 +17,21 @@ body{
     height:600px;
     width: 800px;
 }
-.hovermonitor{
+.hovermouse{
 
     position:absolute;
     display:flex;
-    height: 100px;
-    width: 120px;
-    left:650px;
-    top:490px;
+    height: 110px;
+    width: 100px;
+    left:645px;
+    top:480px;
     rotate: 9deg;
 }
-.hovermonitor:hover{
+.hovermouse:hover{
     box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 10px rgba(255,255,255,0.25) inset;
     -webkit-box-shadow: 2px 2px 26px 10px rgba(255,255,255,0.25) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
     -moz-box-shadow: 2px 2px 26px 10px rgba(255,255,255,0.25) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
+    border-radius: 10px 10px 10px 10px;
 }
 .hoverbook{
 
@@ -85,7 +86,7 @@ body{
     z-index: 5;
     pointer-events: none;
     background-image: url(scan.gif);
-    opacity: 0.3;
+    opacity: 0.5;
     position:absolute;
     display:flex;
     height: 170px;

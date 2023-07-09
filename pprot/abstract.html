@@ -30,6 +30,7 @@
     <div class="bg-container">
       <div class="nav"></div>
       <div class="back" onmouseover="playSound()" onclick="openLink('key.html')"></div>
+      <div class="sound" onmouseover="playSound()" onclick="loopAudio()"></div>
       <div class="home" onmouseover="playSound()" onclick="openLink('main.html')"></div>
         <div class="hovercd" onmouseover="playSound()" onclick="openLink(' abstract.jpg')"></div> 
     </div>
@@ -46,20 +47,33 @@
       sound.play();
     }
   </script>
+  <script>
+    var myAudio = new Audio('buzz.mp3');
+    function loopAudio(){
+
+   
+    myAudio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+myAudio.play();
+} 
+  </script>
     <script>
     function openLink(url) {
       window.location.href = url;
     }
   </script> 
   <script>
-    function playVideo() {
-      var video = document.getElementById("80");
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    }
+    var myAudio = new Audio('buzz.mp3');
+    
+    myAudio.addEventListener('ended', function() {
+
+    this.play();
+}, false);
+function loopAudio(){  
+myAudio.play();
+} 
   </script>
   </body>
 </html>

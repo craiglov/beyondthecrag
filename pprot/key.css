@@ -131,3 +131,17 @@ body{
 .home:hover{
     border-style: ridge;
 }
+.sound{
+    
+    background-image: url(sound.jpg);
+    position:absolute;
+    display:flex;
+    height: 130px;
+    width: 130px;
+    left:650px;
+    top:610px;
+    background-size: contain;
+}
+.sound:hover{
+    border-style: ridge;
+}

@@ -12,7 +12,7 @@ body{
     
     background-size: 800px 600px;
     position: absolute;
-    top:100px;
+    top:0px;
     background-image: url('full.jpg');
     height:600px;
     object-fit: fill;
@@ -45,11 +45,9 @@ body{
 }
 .hoverbook:hover{
 
-      
-    box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 0px rgba(255,255,255,0.75) inset;
--webkit-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
--moz-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
-    
+    box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 10px rgba(255,255,255,0.25) inset;
+    -webkit-box-shadow: 2px 2px 26px 10px rgba(255,255,255,0.25) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 2px 2px 26px 10px rgba(255,255,255,0.25) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
     
 }
 .hovercd{
@@ -64,9 +62,9 @@ body{
 }
 .hovercd:hover{
     
-    box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 0px rgba(255,255,255,0.75) inset;
--webkit-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
--moz-box-shadow: 2px 2px 26px 0px rgba(255,255,255,0.75) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
+    box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 26px 10px rgba(255,255,255,0.25) inset;
+    -webkit-box-shadow: 2px 2px 26px 10px rgba(255,255,255,0.25) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 2px 2px 26px 10px rgba(255,255,255,0.25) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
     
 }
 .vid{
@@ -99,4 +97,41 @@ body{
     rotate: 3deg;
     z-index: 5;
     
+}
+.nav{
+    background-image: url(nav.jpg);
+    position:absolute;
+    display:flex;
+    height: 150px;
+    width: 800px;
+    left:0px;
+    top:600px;
+}
+.back{
+    
+    background-image: url(arrow.jpg);
+    position:absolute;
+    display:flex;
+    height: 130px;
+    width: 130px;
+    left:170px;
+    top:610px;
+    background-size: contain;
+}
+.back:hover{
+    border-style: ridge;
+}
+.home{
+    
+    background-image: url(home.jpg);
+    position:absolute;
+    display:flex;
+    height: 130px;
+    width: 130px;
+    left:20px;
+    top:610px;
+    background-size: contain;
+}
+.home:hover{
+    border-style: ridge;
 }

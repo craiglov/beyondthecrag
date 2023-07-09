@@ -76,10 +76,10 @@ body{
      box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75);
     -webkit-box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75);
     -moz-box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75);
-    transform: skew(-5deg, 8deg);
+    transform: skew(-6deg, 8deg);
     /* each value for each corner clockwise starting from top left */
     rotate:-3deg;
-            border-radius: 25px 7px 15px 30px;
+            border-radius: 22px 7px 15px 22px;
 
 }
 .scan{
@@ -92,18 +92,18 @@ body{
     height: 170px;
     width: 298px;
     left:246px;
-    top:108px;
+    top:110px;
     
     border: 1px solid rgba(255,255,255,0.75);
      box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75), 2px 2px 52px 0px rgba(0, 0, 0, 1) inset;
     -webkit-box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75),2px 2px 52px 0px rgba(0, 0, 0, 1) inset;
     -moz-box-shadow: 2px 2px 52px 0px rgba(255,255,255,0.75),2px 2px 52px 0px rgba(0, 0, 0, 1) inset;
-    transform: skew(-5deg, 8deg);
+    transform: skew(-6deg, 8deg);
     /* each value for each corner clockwise starting from top left */
     rotate:-3deg;
     /* each value for each corner clockwise starting from top left */
 
-            border-radius: 25px 7px 10px 30px;
+            border-radius: 22px 7px 10px 22px;
     
 }
 .nav{

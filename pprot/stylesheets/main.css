@@ -231,7 +231,24 @@ body{
 }
 /* Small screens */
 @media only screen and (max-width: 600px) {
+    .body{
+        max-width: 600px;
+        margin:auto;
+    }
+    .bg-container{
+        transition: opacity 0.5s;
+        opacity: 1;
+        background-size: 400px 300px;
+        position: absolute;
+        top:60px;
+        background-image: url('full.jpg');
+        height:300px;
+        object-fit: fill;
+        width: 400px;
+        left:20px;
+    }
     .nav {
+        top:300px;
       height: 100px;
       width: 100%;
     }
@@ -239,8 +256,19 @@ body{
     .back,
     .home,
     .sound {
+        top:300px;
       height: 80px;
       width: 80px;
       margin: 5px;
     }
+    .sound{
+        left:290px;
+    }
+    .home{
+        left:10px;
+    }
+    .back{
+        left:110px;
+    }
+    
 }

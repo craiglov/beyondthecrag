@@ -20,8 +20,8 @@ let clickables = {
     'navDiv': `<div class="nav"></div>`,
     'mouseDiv': `<div class="hovermouse" onclick="playVideo()" onmouseover="playSound()"></div>`,
     'backDiv': `<div class="back" onmouseover="playSound()" onclick="changeRoom(rooms[currentRoom]['previous'])"></div>`,
-    'vidDiv': `<div class="scan"></div> <video id='80' class="vid" >
-    <source src="vid/eg.mp4" type="video/mp4">Your browser does not support the video tag.</video> `
+    'vidDiv': ` <video id='80' class="vid" >
+    <source src="vid/eg.mp4" type="video/mp4">Your browser does not support the video tag.</video><div class="scan"></div> `
 };
 let rooms = {
     'main': {

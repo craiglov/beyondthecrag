@@ -78,7 +78,7 @@ body{
     z-index: 5;
     pointer-events: none;
     background-image: url(../img/scan.gif);
-    opacity: 0.5;
+    opacity: 0.3;
     position:absolute;
     display:flex;
     height: 170px;

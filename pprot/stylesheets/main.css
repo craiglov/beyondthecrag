@@ -229,3 +229,18 @@ body{
     -moz-box-shadow: 2px 2px 26px 10px rgba(255,255,255,0.25) inset, 2px 2px 52px 0px rgba(255,255,255,0.75);
     
 }
+/* Small screens */
+@media only screen and (max-width: 600px) {
+    .nav {
+      height: 100px;
+      width: 100%;
+    }
+  
+    .back,
+    .home,
+    .sound {
+      height: 80px;
+      width: 80px;
+      margin: 5px;
+    }
+}

@@ -99,6 +99,7 @@ let rooms = {
 };
 
 let currentRoom = 'main';  // start in main
+
 function changeRoom(newRoom) {
     if (rooms.hasOwnProperty(newRoom)) {  // check if the new room name is valid
         fadeOutRoom(function() {
@@ -131,14 +132,19 @@ function loadRoom() {
 
 
 function fadeOutRoom(callback) {
-    let container = document.getElementsByClassName('bg-container')[0];
+    const container = document.getElementsByClassName('bg-container')[0];
     container.classList.add('fade');
-
-
-    // Wait for the transition to finish before calling the callback
-    setTimeout(callback, 500);
-}
-
+  
+    // Wait for the transition to finish before invoking the callback
+    const transitionDuration = 500; // Transition duration in milliseconds
+    setTimeout(() => {
+      container.classList.remove('fade');
+      if (typeof callback === 'function') {
+        callback();
+      }
+    }, transitionDuration);
+  }
+  
 function fadeInRoom() {
     let container = document.getElementsByClassName('bg-container')[0];
     container.classList.remove('fade');

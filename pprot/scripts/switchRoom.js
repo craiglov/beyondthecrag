@@ -176,6 +176,7 @@ soundDiv.addEventListener('click', function() {
     isAudioPlaying = false;
   } else {
     audioElement.play();
+    audioElement.loop = true;
     isAudioPlaying = true;
   }
 });

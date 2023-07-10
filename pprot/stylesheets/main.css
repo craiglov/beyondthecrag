@@ -293,6 +293,9 @@ body{
     .fx{
         left: 196px;
     }
+    .hoverbook{
+        top:50px;
+    }
     
 }
 @keyframes pulsing-light {

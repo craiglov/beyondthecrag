@@ -13,7 +13,7 @@ let clickables = {
     'toDeskDiv': `<div class="hovercd" onmouseover ="playSound()" onclick="changeRoom('desk')"></div>`,
     'toComputerDiv': `<div class="toComputer" onmouseover="playSound()" onclick="changeRoom('computer')"></div>`,
     'toHomeDiv': `<div class="home" onmouseover="playSound()" onclick="changeRoom('main')"></div>`,
-    'audioOnDiv': `<div class="sound" onmouseover="playSound()" onclick="loopAudio()"></div>`,
+    'audioOnDiv': `<div class="sound" onmouseover="playSound()"></div>`,
     'toChestDiv': `<div class="hoverbook" onmouseover="playSound()" onclick="changeRoom('chest')"></div>`,
     'toAbstractDiv': `<div class="toAbstract" onmouseover="playSound()" onclick="changeRoom('abstract')"></div>`,
     'wellsNoiseDiv': `<div class="wells" onclick="playWells()"></div>`,
@@ -153,5 +153,29 @@ function fadeInRoom() {
 }
 
 
+
 // Call loadRoom() once at the start to load the initial room
 loadRoom();
+const soundDiv = document.querySelector('.sound');
+const bodyElement = document.querySelector('body');
+const audioElement = new Audio('sound/amb.mp3');
+let isAnimationOn = false;
+let isAudioPlaying = false;
+
+soundDiv.addEventListener('click', function() {
+  if (isAnimationOn) {
+    bodyElement.classList.remove('pulsing-animation');
+    isAnimationOn = false;
+  } else {
+    bodyElement.classList.add('pulsing-animation');
+    isAnimationOn = true;
+  }
+
+  if (isAudioPlaying) {
+    audioElement.pause();
+    isAudioPlaying = false;
+  } else {
+    audioElement.play();
+    isAudioPlaying = true;
+  }
+});

@@ -6,6 +6,7 @@ body{
     margin: auto;
     max-width: 800px;
     background-color: black;
+    
 
 }
 
@@ -13,6 +14,8 @@ body{
     opacity: 0;
 }
 .bg-container{
+    border-style: ridge;
+    border-width: 7px;
     transition: opacity 0.5s;
     opacity: 1;
     background-size: 800px 600px;
@@ -107,8 +110,10 @@ body{
     display:flex;
     height: 150px;
     width: 800px;
-    left:0px;
+    left:-7px;
     top:600px;
+    border-style: ridge;
+    border-width: 7px;
 }
 .back{
     border: solid 5px rgb(112, 112, 112);
@@ -118,7 +123,7 @@ body{
     height: 130px;
     width: 130px;
     left:170px;
-    top:605px;
+    top:610px;
     background-size: contain;
 }
 .back:hover{
@@ -132,7 +137,7 @@ body{
     height: 130px;
     width: 130px;
     left:20px;
-    top:605px;
+    top:610px;
     background-size: contain;
 }
 .home:hover{
@@ -146,7 +151,7 @@ body{
     height: 130px;
     width: 130px;
     left:650px;
-    top:605px;
+    top:610px;
     background-size: contain;
 }
 .sound:hover{
@@ -256,7 +261,7 @@ body{
     .back,
     .home,
     .sound {
-        top:300px;
+        top:307px;
       height: 80px;
       width: 80px;
       margin: 5px;
@@ -272,3 +277,51 @@ body{
     }
     
 }
+@keyframes pulsing-light {
+    0% {
+      opacity: 0.94;
+    }
+    10% {
+      opacity: 0.93;
+    }
+    11% {
+      opacity: 0.88;
+    }
+    12% {
+      opacity: 1;
+    }
+    18% {
+      opacity: 0.83;
+    }
+    25% {
+      opacity: 0.9;
+    }
+    26% {
+      opacity: 0.93;
+    }
+    50% {
+      opacity: 0.79;
+    }
+    60% {
+      opacity: 0.9;
+    }
+    61% {
+      opacity: 0.94;
+    }
+    62% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0.9;
+    }
+    76% {
+      opacity: 0.93;
+    }
+    100% {
+      opacity: 0.87;
+    }
+  }
+  
+  body.pulsing-animation {
+    animation: pulsing-light 4s infinite;
+  }

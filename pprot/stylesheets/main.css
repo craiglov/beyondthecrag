@@ -8,8 +8,13 @@ body{
     background-color: black;
 
 }
+
+.bg-container.fade {
+    opacity: 0;
+}
 .bg-container{
-    
+    transition: opacity 0.5s;
+    opacity: 1;
     background-size: 800px 600px;
     position: absolute;
     top:10px;

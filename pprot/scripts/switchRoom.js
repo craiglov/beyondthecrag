@@ -99,15 +99,21 @@ let rooms = {
 };
 
 let currentRoom = 'main';  // start in main
-
+ // Replace with your sound file
 function changeRoom(newRoom) {
     if (rooms.hasOwnProperty(newRoom)) {  // check if the new room name is valid
-        currentRoom = newRoom;
-        loadRoom();
+        fadeOutRoom(function() {
+            var fadeSound = new Audio('door.mp3');
+            fadeSound.play();
+            currentRoom = newRoom;
+            loadRoom();
+            fadeInRoom();
+        });
     } else {
         console.error('Invalid room name:', newRoom);
     }
 }
+
 
 
 function loadRoom() {
@@ -125,6 +131,24 @@ function loadRoom() {
     container.style.backgroundImage = roomDivs['background'];
 
 }
+
+
+function fadeOutRoom(callback) {
+    let container = document.getElementsByClassName('bg-container')[0];
+    container.classList.add('fade');
+
+
+    // Wait for the transition to finish before calling the callback
+    setTimeout(callback, 500);
+}
+
+function fadeInRoom() {
+    let container = document.getElementsByClassName('bg-container')[0];
+    container.classList.remove('fade');
+
+     // play the sound
+}
+
 
 // Call loadRoom() once at the start to load the initial room
 loadRoom();

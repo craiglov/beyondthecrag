@@ -46,6 +46,7 @@
   <script>
     function playVideo() {
       var video = document.getElementById("80");
+      video.volume = 0.4;
       if (video.paused) {
         video.play();
       } else {

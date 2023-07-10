@@ -118,7 +118,7 @@ body{
     height: 130px;
     width: 130px;
     left:170px;
-    top:610px;
+    top:605px;
     background-size: contain;
 }
 .back:hover{
@@ -132,7 +132,7 @@ body{
     height: 130px;
     width: 130px;
     left:20px;
-    top:610px;
+    top:605px;
     background-size: contain;
 }
 .home:hover{
@@ -146,7 +146,7 @@ body{
     height: 130px;
     width: 130px;
     left:650px;
-    top:610px;
+    top:605px;
     background-size: contain;
 }
 .sound:hover{

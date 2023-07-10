@@ -21,7 +21,8 @@ let clickables = {
     'mouseDiv': `<div class="hovermouse" onclick="playVideo()" onmouseover="playSound()"></div>`,
     'backDiv': `<div class="back" onmouseover="playSound()" onclick="changeRoom(rooms[currentRoom]['previous'])"></div>`,
     'vidDiv': ` <video id='80' class="vid" >
-    <source src="vid/eg2.mp4" type="video/mp4">Your browser does not support the video tag.</video><div class="scan"></div> `
+    <source src="vid/eg2.mp4" type="video/mp4">Your browser does not support the video tag.</video><div class="scan"></div> `,
+    'fxDiv': `<div class="fx" onmouseover="playSound()"></div>`,
 };
 let rooms = {
     'main': {
@@ -36,7 +37,8 @@ let rooms = {
         'mouseDiv':0,
         'backDiv':1,
         'background': 'url("img/full.jpg")',
-        'previous':'main'
+        'previous':'main',
+        'fxDiv': 1
     },
     'desk': {
         'navDiv':1,
@@ -50,7 +52,8 @@ let rooms = {
         'mouseDiv':0,
         'backDiv':1,
         'background': 'url("img/personal.jpg")',
-        'previous':'main'
+        'previous':'main',
+        'fxDiv': 1
     },
     'computer': {
         'navDiv':1,
@@ -65,7 +68,8 @@ let rooms = {
         'backDiv':1,
         'background': 'url("img/zoom.jpg")',
         'vidDiv':1,
-        'previous':'desk'
+        'previous':'desk',
+        'fxDiv': 1
     },
     'abstract': {
         'navDiv':1,
@@ -79,7 +83,8 @@ let rooms = {
         'mouseDiv':0,
         'backDiv':1,
         'background': 'url("img/abstract.jpg")',
-        'previous':'chest'
+        'previous':'chest',
+        'fxDiv': 1
     },
     'chest': {
         'navDiv':1,
@@ -93,7 +98,8 @@ let rooms = {
         'mouseDiv':0,
         'backDiv':1,
         'background': 'url("img/key.jpg")',
-        'previous':'main'
+        'previous':'main',
+        'fxDiv': 1
     },
     // add more rooms as needed
 };
@@ -157,26 +163,37 @@ function fadeInRoom() {
 // Call loadRoom() once at the start to load the initial room
 loadRoom();
 const soundDiv = document.querySelector('.sound');
+const fxDiv = document.querySelector('.fx');
 const bodyElement = document.querySelector('body');
 const audioElement = new Audio('sound/amb.mp3');
 let isAnimationOn = false;
-let isAudioPlaying = false;
-
-soundDiv.addEventListener('click', function() {
-  if (isAnimationOn) {
+let isPlaying = false;
+fxDiv.addEventListener('click', function() {
+if (isAnimationOn) {
     bodyElement.classList.remove('pulsing-animation');
     isAnimationOn = false;
   } else {
     bodyElement.classList.add('pulsing-animation');
     isAnimationOn = true;
   }
-
-  if (isAudioPlaying) {
-    audioElement.pause();
-    isAudioPlaying = false;
-  } else {
+}); 
+audioElement.addEventListener('ended', function() {
+    audioElement.currentTime = 0; // Reset the playback position to the beginning
     audioElement.play();
-    audioElement.loop = true;
-    isAudioPlaying = true;
-  }
-});
+  });
+  
+  soundDiv.addEventListener('click', function() {
+    if (!isPlaying) {
+      audioElement.loop = true;
+      audioElement.currentTime = 0; // Reset the playback position to the beginning
+      audioElement.play();
+      isPlaying = true;
+      soundDiv.classList.add('active'); // Add a class to indicate active state
+    } else {
+      audioElement.loop = false;
+      audioElement.pause();
+      isPlaying = false;
+      soundDiv.classList.remove('active'); // Remove the class for inactive state
+    }
+  });
+  

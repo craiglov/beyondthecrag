@@ -13,7 +13,7 @@ let clickables = {
     'toDeskDiv': `<div class="hovercd" onmouseover ="playSound()" onclick="changeRoom('desk')"></div>`,
     'toComputerDiv': `<div class="toComputer" onmouseover="playSound()" onclick="changeRoom('computer')"></div>`,
     'toHomeDiv': `<div class="home" onmouseover="playSound()" onclick="changeRoom('main')"></div>`,
-    'audioOnDiv': `<div class="sound" onmouseover="playSound()"></div>`,
+    'audioOnDiv': `<div class="sound" onmouseover="playSound()" onclick="toggleSound()"></div>`,
     'toChestDiv': `<div class="hoverbook" onmouseover="playSound()" onclick="changeRoom('chest')"></div>`,
     'toAbstractDiv': `<div class="toAbstract" onmouseover="playSound()" onclick="changeRoom('abstract')"></div>`,
     'wellsNoiseDiv': `<div class="wells" onclick="playWells()"></div>`,
@@ -22,7 +22,7 @@ let clickables = {
     'backDiv': `<div class="back" onmouseover="playSound()" onclick="changeRoom(rooms[currentRoom]['previous'])"></div>`,
     'vidDiv': ` <video id='80' class="vid" >
     <source src="vid/eg2.mp4" type="video/mp4">Your browser does not support the video tag.</video><div class="scan"></div> `,
-    'fxDiv': `<div class="fx" onmouseover="playSound()"></div>`,
+    'fxDiv': `<div class="fx" onmouseover="playSound()" onclick="toggleFX()"></div>`,
 };
 let rooms = {
     'main': {
@@ -168,7 +168,7 @@ const bodyElement = document.querySelector('body');
 const audioElement = new Audio('sound/amb.mp3');
 let isAnimationOn = false;
 let isPlaying = false;
-fxDiv.addEventListener('click', function() {
+function toggleFX() {
 if (isAnimationOn) {
     bodyElement.classList.remove('pulsing-animation');
     isAnimationOn = false;
@@ -176,13 +176,13 @@ if (isAnimationOn) {
     bodyElement.classList.add('pulsing-animation');
     isAnimationOn = true;
   }
-}); 
+};
 audioElement.addEventListener('ended', function() {
     audioElement.currentTime = 0; // Reset the playback position to the beginning
     audioElement.play();
   });
   
-  soundDiv.addEventListener('click', function() {
+ function toggleSound() {
     if (!isPlaying) {
       audioElement.loop = true;
       audioElement.currentTime = 0; // Reset the playback position to the beginning
@@ -195,5 +195,5 @@ audioElement.addEventListener('ended', function() {
       isPlaying = false;
       soundDiv.classList.remove('active'); // Remove the class for inactive state
     }
-  });
+  };
   
